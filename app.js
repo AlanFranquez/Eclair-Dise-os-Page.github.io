@@ -17,17 +17,18 @@ var swiper = new Swiper(".mySwiper", {
 
 
 // NAV
-const nav = document.querySelector('nav');
-  window.addEventListener('scroll', function() {
+// const nav = document.querySelector('nav');
+//   window.addEventListener('scroll', function() {
 
-    if(window.scrollY > 400) {
-      nav.classList.add('bg-fijado', 'shadow')
-    } else {
-      nav.classList.remove('bg-fijado', 'shadow')
-    }
+//     if(window.scrollY > 400) {
+//       nav.classList.add('bg-fijado', 'shadow')
+//     } else {
+//       nav.classList.remove('bg-fijado', 'shadow')
+//     }
   
-    // console.log(this.window.screen.availWidth)
-  })
+//     // console.log(this.window.screen.availWidth)
+//   })
+
 
 
 

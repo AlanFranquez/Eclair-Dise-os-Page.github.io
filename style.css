@@ -46,6 +46,17 @@ a:hover {
     color: white;
 }
 
+.categorias-bg {
+    padding: 10px 20px;
+    transition: .2 all ease;
+}
+
+.categorias-bg:hover {
+    background-color: #ec9696!important;
+    border-radius: 10px;
+    transition: .2 all ease;
+}
+
 nav ul li {
     padding: 6px 13px;
     transition: all 0.2 ease;
@@ -70,6 +81,7 @@ header {
 .categoria-titulo{
     font-weight: bold;
     font-size: 2rem;
+    color: rgb(87, 82, 82);
 }
 
 .imagenfondo {
@@ -77,20 +89,16 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 60rem;
+    height: 600px;
     position: relative;
 }
 
-.hijo {
-    /* centrar vertical y horizontalmente */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -100px 0 0 -100px; /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */
-    font-size: 50px;
-    text-align: center;
-    color: white;
-  }
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
 .icono {
     width: 25rem;
@@ -119,12 +127,11 @@ main .title {
     width: 40px!important;
 }
 
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-toggler:active {
- border: none!important;
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 main .info {
@@ -239,6 +246,8 @@ section h2 {
     height: 500px;
     object-fit: cover;
   }
+
+
 
 /* .imagen-slide {
     height: 500px;
@@ -364,8 +373,8 @@ a {
 }
 
 .text h3 {
-    font-weight: 500;
-    color: #00bcd4;
+    font-weight: 700;
+    color: #d1d1d1;
 }
 
 .contactFormulario {
@@ -423,6 +432,14 @@ a {
         height: 100%;
         object-fit: cover;
       }
+
+    
+}
+
+@media (min-width: 768px) {
+    .swiper-button-next, .swiper-button-prev {
+        margin: 0 350px;
+    }
 }
 
 footer {
@@ -451,4 +468,32 @@ footer {
 
 .descripcion {
     font-size: 1.7rem;
+}
+
+/* Galeria */
+
+.gallery {
+    margin: 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.gallery img {
+    height: 250px;
+    width: 250px;
+    padding: 8px;
+    filter: grayscale(100%);
+    transition: .1s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.descripcion {
+    margin-top: 80px;
+    text-align: center;
+    font-style: italic;
+    color: #a76a41;
 }
